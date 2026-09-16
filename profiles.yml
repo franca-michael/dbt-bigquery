@@ -1,6 +1,7 @@
-bigquerydw:
+dbt_bigquery:
   outputs:
     dev:
+      type: bigquery
       method: "{{ env_var('DBT_METHOD') }}"
       project: "{{ env_var('DBT_PROJECT') }}"
       dataset: "{{ env_var('DBT_DATASET') }}"
